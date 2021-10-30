@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Margo | Video Call</title>
+    <link rel="icon" href="/img/logo.png" type="image/gif" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/css/videoCall.css" />
+    <link rel="stylesheet" href="/css/pamperBooth.css" />
+  </head>
+  <body>
+    <div class="video">
+      <div class="navbar" style="overflow: hidden">
+        <img src="/img/Website Logo.png" id="website-logo" />
+        <ul class="navbar-links">
+          <li><a href="/" class="period-tracker">Home</a></li>
+          <li><a href="/tracker" class="period-tracker">Period Tracker</a></li>
+          <li><a href="/pamperBooth" class="pamper-booth">Pamper Booth</a></li>
+          <li><a href="/forum" class="forum">Forum</a></li>
+          <li><a href="/blog" class="period-tracker">Blog</a></li>
+          <li><a href="/products" class="shop">Shop</a></li>
+          <li><a href="/videoCall" class="call">Call</a></li>
+        </ul>
+        <button class="start-here">
+          <a style="text-decoration: none" href="/profile">Profile</a>
+        </button>
+      </div>
+      <div class="video-text">
+        <h1 class="video-heading">
+          Video Call with Loved One to get The Support You Deserve
+        </h1>
+        <div style="position: relative; margin-top: 20px">
+          <input
+            class="video-input"
+            type="text"
+            placeholder="loved_one@email.com"
+          />
+          <i class="fas fa-3x fa-long-arrow-alt-right video-submit"></i>
+        </div>
+        <div class="video-img"></div>
+      </div>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.23.0/axios.min.js"
+      integrity="sha512-Idr7xVNnMWCsgBQscTSCivBNWWH30oo/tzYORviOCrLKmBaRxRflm2miNhTFJNVmXvCtzgms5nlJF4az2hiGnA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script>
+      const call = async () => {
+        try {
+          if (document.querySelector(".video-input").value.length == 0) return;
+          let arr = document.querySelector(".video-input").value.split(",");
+          let mails = arr.map((mail) => mail.trim());
+          console.log(mails);
+          let res = await axios.post("https://margowomen.herokuapp.com/call/connect", {
+            mail: mails,
+          });
+          window.location.href = res.data.link;
+        } catch (err) {
+          console.log(err);
+        }
+      };
+
+      document.querySelector(".video-submit").addEventListener("click", call);
+      document
+        .querySelector(".video-input")
+        .addEventListener("keypress", function (e) {
+          if (e.key == "Enter") {
+            call();
+          }
+        });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/pamperBooth.css" />
+    <title>Margo | Pamper Booth</title>
+    <link rel="icon" href="/img/logo.png" type="image/gif">
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.23.0/axios.min.js" integrity="sha512-Idr7xVNnMWCsgBQscTSCivBNWWH30oo/tzYORviOCrLKmBaRxRflm2miNhTFJNVmXvCtzgms5nlJF4az2hiGnA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript">
+      function sendEmail() {
+        var receiverId = document.querySelector("input").value;
+       axios.post("https://margowomen.herokuapp.com/call/mail",{mail:receiverId}).then(function (message) {
+          alert("Mail Sent Successfully");
+        }).catch(function (message) {
+          alert("failed to Sent Successfully");
+        });
+      
+      }
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="navbar">
+        <img src="/img/Website Logo.png" id="website-logo">
+        <ul class="navbar-links">
+            <li><a href="/" class="period-tracker">Home</a></li>
+            <li><a href="/tracker" class="period-tracker">Period Tracker</a></li>
+            <li><a href="/pamperBooth" class="pamper-booth">Pamper Booth</a></li>
+            <li><a href="/forum"  class="forum">Forum</a></li>
+            <li><a href="/blog" class="period-tracker">Blog</a></li>
+            <li><a href="/products" class="shop">Shop</a></li>
+            <li><a href="/videoCall" class="call">Call</a></li>
+        </ul>
+        <button class="start-here"> <a style="text-decoration: none;" href="/profile">Profile</a> </button>
+    </div>
+
+      <div class="header">
+        <div>
+          <img src="/img/Pamper-Booth-Main-Image.png" class="header-image" />
+          <div class="header-heading-box">
+            <p class="header-heading">You Deserve Everything.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="emotions-section">
+        <div>
+          <p class="emotions-heading">How are you feeling today?</p>
+          <button class="in-pain emotion-btn">In Pain</button>
+          <button class="okayish emotion-btn">Okayish</button>
+          <button class="good emotion-btn">Good</button>
+          <button class="like-a-queen emotion-btn">Like A Queen</button>
+        </div>
+        <div>
+          <img src="/img/eggs-emotions.png" class="emotions-image" />
+        </div>
+      </div>
+
+        <div class="music-section">
+            <div>
+                <img src="/img/music.png" class="music-image">
+            </div>
+            <div>
+                <p class="music-heading">Experience the power of Spotify API. Here is the playlist based on your current mood:</p>
+                <a href="#" style="position: absolute;
+                left: 900px;
+                top: 1278px;
+                text-decoration: none;
+                color: #7393FA;
+                font-size: 27px;
+                font-weight: bold;
+                text-align: center;
+                text-decoration: underline;" class="playlist-link" target="_blank"></a>
+                <img src="/img/Spotify_Logo_RGB_Green 1.png" class="spotify-logo">
+            </div>
+        </div>
+        <!-- <div>
+          <p class="music-heading">
+            Connect Your Spotify Account To Get Customised Playlists
+          </p>
+
+          <img src="images/Spotify_Logo_RGB_Green 1.png" class="spotify-logo" />
+        </div> -->
+      </div>
+
+      <div class="notifications-section">
+        <div>
+          <p class="notifications-heading">
+            Send Notifications To Your Loved Ones and Get The Care You Deserve
+            (+ Chocolates)
+          </p>
+          <input
+            type="text"
+            name="notifications-email"
+            id="notifications-email"
+            placeholder="loved_one@domain"
+          />
+          <button onclick="sendEmail()" class="notifications-button">
+            <img src="/img/send.png" class="send-icon" />
+          </button>
+        </div>
+        <div>
+          <img src="/img/sisters.png" class="notifications-image" />
+        </div>
+      </div>
+    </div>
+    <script>
+       var apis = ["https://spotify-mood-playlist-api.herokuapp.com/periodCramp","https://spotify-mood-playlist-api.herokuapp.com/sad","https://spotify-mood-playlist-api.herokuapp.com/good","https://spotify-mood-playlist-api.herokuapp.com/happy"];
+       var buttons = document.getElementsByClassName("emotion-btn");
+    //    console.log(buttons);
+       for(var i=0;i<buttons.length;i++){
+            buttons[i].addEventListener("click",async (e)=>{
+                // console.log(e.srcElement.classList[0]);
+                document.getElementsByClassName("playlist-link")[0].textContent = "Playlist Link!";
+                switch(e.srcElement.classList[0]){
+                    case "in-pain":
+                                    await fetch("https://pure-caverns-94319.herokuapp.com/"+apis[0])
+                                        .then(response => response.json())
+                                        .then(data => {
+                                            document.getElementsByClassName("playlist-link")[0].href=data[0].url;
+                                    });
+                                    break;
+                    case "okayish":
+                                    await fetch("https://pure-caverns-94319.herokuapp.com/"+apis[1])
+                                        .then(response => response.json())
+                                        .then(data => {
+                                            document.getElementsByClassName("playlist-link")[0].href=data[0].url;
+                                    });
+                                    break;
+                    case "good": 
+                                    await fetch("https://pure-caverns-94319.herokuapp.com/"+apis[2])
+                                        .then(response => response.json())
+                                        .then(data => {
+                                            document.getElementsByClassName("playlist-link")[0].href=data[0].url;
+                                    });
+                                    break;
+                    case "like-a-queen": 
+                                    await fetch("https://pure-caverns-94319.herokuapp.com/"+apis[2])
+                                        .then(response => response.json())
+                                        .then(data => {
+                                            document.getElementsByClassName("playlist-link")[0].href=data[0].url;
+                                    });
+                                    break;
+                }
+            });
+       }
+    </script>
+</body>
+</html>

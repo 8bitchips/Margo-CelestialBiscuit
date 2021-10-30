@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Margo | Forum</title>
+    <link rel="icon" href="/img/logo.png" type="image/gif">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.23.0/axios.min.js"
+      integrity="sha512-Idr7xVNnMWCsgBQscTSCivBNWWH30oo/tzYORviOCrLKmBaRxRflm2miNhTFJNVmXvCtzgms5nlJF4az2hiGnA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link rel="stylesheet" href="/css/forum.css" />
+    <link rel="stylesheet" href="/css/pamperBooth.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+        <div class="navbar" style="position: fixed;">
+			<img src="/img/Website Logo.png" id="website-logo" />
+			<ul class="navbar-links">
+			  <li><a href="/" class="period-tracker">Home</a></li>
+			  <li><a href="/tracker" class="period-tracker">Period Tracker</a></li>
+			  <li><a href="/pamperBooth" class="pamper-booth">Pamper Booth</a></li>
+			  <li><a href="/forum" class="forum">Forum</a></li>
+			  <li><a href="/blog" class="period-tracker">Blog</a></li>
+			  <li><a href="/products" class="shop">Shop</a></li>
+			  <li><a href="/videoCall" class="call">Call</a></li>
+			</ul>
+      <button class="start-here"> <a style="text-decoration: none;" href="/profile">Profile</a> </button>
+		  </div>
+
+      <div class="forum-header-img">
+        <div class="forum-header-filter">
+          <div class="forum-heading">Forum</div>
+        </div>
+      </div>
+
+      <div class="input-box">
+        <input type="text" name="" id="" placeholder="Enter message..." />
+        <button class="submit">
+          <i class="far fa-comment-alt"></i> Send
+        </button>
+       
+      </div>
+
+        <div class="msgs">
+          <!-- <div class="heading">Forum</div> -->
+        <div class="chat">
+            <div class="details">
+              <div class="pic">
+                <img src="/img/dummy-image.jpg" alt="" />
+              </div>
+              <div class="name">Test 1</div>
+            </div>
+            <div class="msg">Hiii Girls</div>
+        </div>
+        <div class="chat">
+            <div class="details">
+              <div class="pic">
+                <img src="/img/dummy-image.jpg" alt="" />
+              </div>
+              <div class="name">Test 2</div>
+            </div>
+            <div class="msg">Hey !</div>
+        </div>
+        <div class="chat">
+            <div class="details">
+              <div class="pic">
+                <img src="/img/dummy-image.jpg" alt="" />
+              </div>
+              <div class="name">Test 3</div>
+            </div>
+            <div class="msg">Sup! how are you doing ?</div>
+        </div>
+        <div class="chat">
+            <div class="details">
+              <div class="pic">
+                <img src="/img/dummy-image.jpg" alt="" />
+              </div>
+              <div class="name">Test 1</div>
+            </div>
+            <div class="msg">**** u</div>
+        </div>
+      </div>
+      
+    </div>
+
+    <script>
+        let name ="";
+
+        (async function(){
+            let res = await axios.post("https://margowomen.herokuapp.com/auth/mail");
+            name = (res.data.id.split("@")[0]);
+        })()
+
+        let addMsg =async (value)=>{
+            let res = await axios.get(`https://profanewordmargoapi.azurewebsites.net/predict/${value}`);
+            addMsgIntoUI(res.data.txt)
+        }
+
+        let btn = document.querySelector(".submit");
+        let inputDiv = document.querySelector("input")
+
+        btn.addEventListener("click", function(){
+            addMsg(inputDiv.value)
+            inputDiv.value = "";
+        })
+        
+        inputDiv.addEventListener("keypress", function(e){
+            if(e.key == "Enter"){
+                addMsg(inputDiv.value)
+                inputDiv.value = "";
+
+            }
+        })
+
+        const msgs = document.querySelector(".msgs")
+        function addMsgIntoUI(value){
+            let div = document.createElement("div")
+            div.classList.add("chat")
+            div.innerHTML = `
+            <div class="details">
+              <div class="pic">
+                <img src="/img/dummy-image.jpg" alt="" />
+              </div>
+              <div class="name">${name}</div>
+            </div>
+            <div class="msg">${value}</div>`
+            msgs.prepend(div)
+        }
+
+
+    </script>
+  </body>
+</html>

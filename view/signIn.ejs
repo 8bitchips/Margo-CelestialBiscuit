@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/signIn.css" />
+    <link rel="stylesheet" href="/css/pamperBooth.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&family=Zilla+Slab:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <title>Sign IN</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="navbar">
+        <img src="/img/Website Logo.png" id="website-logo" />
+        <ul class="navbar-links">
+          <li><a href="/" class="period-tracker">Home</a></li>
+          <li><a href="/tracker" class="period-tracker">Period Tracker</a></li>
+          <li><a href="/pamperBooth" class="pamper-booth">Pamper Booth</a></li>
+          <li><a href="/forum" class="forum">Forum</a></li>
+          <li><a href="/blog" class="period-tracker">Blog</a></li>
+          <li><a href="/products" class="shop">Shop</a></li>
+          <li><a href="/videoCall" class="call">Call</a></li>
+        </ul>
+      </div>
+      <div class="box">
+        <div class="portion1">
+          <div class="logo">
+            <i class="fas fa-user-alt"></i>
+          </div>
+          <div class="auth"></div>
+        </div>
+        <div class="portion2">
+          <h1>Hello Beautiful,</h1>
+
+          <p>
+            Enter your details below to create your account <br />
+            or login to an existing account.
+          </p>
+        </div>
+        <div class="portion3">
+          <div id="sawo-container" style="height: 300px; width: 100%"></div>
+        </div>
+
+       
+      </div>
+    </div>
+  </body>
+  <script src="https://websdk.sawolabs.com/sawo.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.23.0/axios.min.js" integrity="sha512-Idr7xVNnMWCsgBQscTSCivBNWWH30oo/tzYORviOCrLKmBaRxRflm2miNhTFJNVmXvCtzgms5nlJF4az2hiGnA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>
+    var config = {
+      containerID: "sawo-container",
+      identifierType: "email",
+      apiKey: "22d5c911-c87e-42f4-9458-976dea6b83c0",
+      onSuccess: (payload) => {
+        axios.post("https://margowomen.herokuapp.com/auth/login",{id:payload.identifier}).then(()=>{
+          window.location.href = "/"
+        }).catch(()=>{
+          alert("failed to login")
+        })
+      },
+    };
+    var sawo = new Sawo(config);
+    sawo.showForm();
+  </script>
+</html>

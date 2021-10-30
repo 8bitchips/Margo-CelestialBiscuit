@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/userProfile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&family=Zilla+Slab:wght@300&display=swap"
+        rel="stylesheet">
+    <title>Margo | User-Profile</title>
+    <link rel="icon" href="/img/logo.png" type="image/gif">
+    <link rel="stylesheet" href="/css/pamperBooth.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <img src="/img/Website Logo.png" id="website-logo">
+        <ul class="navbar-links">
+            <li><a href="/" class="period-tracker">Home</a></li>
+            <li><a href="/tracker" class="period-tracker">Period Tracker</a></li>
+            <li><a href="/pamperBooth" class="pamper-booth">Pamper Booth</a></li>
+            <li><a href="/forum" class="pamper-booth">Forum</a></li>
+            <li><a href="/blog" class="period-tracker">Blog</a></li>
+            <li><a href="/products" class="shop">Shop</a></li>
+            <li><a href="/videoCall" class="call">Call</a></li>
+        </ul>
+        <!-- <button class="start-here"> <a style="text-decoration: none;" href="/profile">Profile</a> </button> -->
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="container">
+        
+        <div class="column1">
+            <div class="profile-photo">
+                <div class="pic"><img src="/img/dummy-image.jpg" alt="" srcset=""></div>
+                <div class="name">Team Margo</div>
+            </div>
+            <div class="options">
+                <div class="information">Information</div>
+                <div class="personal-details">Personal Details</div>
+                <div class="lovedOnes">Your Loved Ones</div>
+            </div>
+        </div>
+        <div class="column2">
+            <div class="info-div">
+                <div class="first">
+                    <div class="heading">Information </div>
+                </div>
+                <div class="second">
+                    <div class="wrap">
+                        <div class="mainprofile">
+                            <div class="pDetails">
+                                <!-- <div id="name">
+                                    Nishtha
+                                </div> -->
+                                <div class="details">
+                                    <div id="email"><span>Name : </span>
+                                        <input type="text" name="" id="pEmail" placeholder="Jenna" >
+                                    </div>
+                                    <div id="email"><span>Email : </span>
+                                        <input type="text" name="" id="pEmail" placeholder="user@email.com" >
+                                    </div>
+                                    <div id="mobileno"><span>Age :</span>
+                                        <input type="text" name="" id="pPhone" placeholder="18" >
+
+                                    </div>
+                                    <div id="address"><span> Height :</span>
+                                        <input type="text" name="" id="pAddress" placeholder="5'6''" >
+
+                                    </div>
+                                    <div id="timing"><span>Weight :</span>
+                                        <input type="text" name="" id="pAge" placeholder="48 Kg" >
+
+                                    </div>
+
+
+                                    <div class="editBtn">Edit</div>
+                                    <div class="saveBtn">Save</div>
+                                    <div class="ProfilecancelBtn">Cancel</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pd-div"></div>
+                        <div class="lo-div"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="personalDetails-div">
+
+                <div class="first">
+                    <div class="heading">Personal Details </div>
+                </div>
+                <div class="second">
+                    <div class="wrap">
+                        <div class="mainprofile">
+                            <div class="pDetails">
+                                <!-- <div id="name">
+                                    Nishtha
+                                </div> -->
+                                <div class="detailsPD">
+                                    <div id="email"><span> Specify your last period date : </span>
+                                        <input type="date" name="" id="pEmail" placeholder="15/10/2020" >
+                                    </div>
+                                    <div id="mobileno"><span> How often do you get your periods usually : </span>
+                                        <input type="text" name="" id="pPhone" placeholder="1" >
+
+                                    </div>
+                                    <div id="address"><span> For how many days your periods go on : </span>
+                                        <input type="text" name="" id="pAddress" placeholder="5" >
+
+                                    </div>
+                                    <div id="timing"><span>How many sanitary napkins or pads you use daily : </span>
+                                        <input type="text" name="" id="pAge" placeholder="5">
+
+                                    </div>
+
+
+                                    <div class="editBtn">Edit</div>
+                                    <div class="saveBtn">Save</div>
+                                    <div class="ProfilecancelBtn">Cancel</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="lovedOnes-div">
+                
+                <div class="first">
+                    <div class="heading">Your Loved Ones </div>
+                </div>
+                <div class="button-addPeople">
+                    <div class="but">Add your loved ones!</div>
+                </div>
+                <div class="modal">
+                    <div class="second-modal">
+                        <div class="wrap">
+                            <div class="mainprofile">
+                                <div class="pDetails">
+                                    
+                                    <div class="details">
+                                        <div id="modal-name"><span>Name : </span>
+                                            <input type="text" name="" id="pName" value="" placeholder="Name" >  
+                                        </div>
+                                        <div id="email"><span>Email : </span>
+                                            <input type="text" name="" id="pEmail" value="" placeholder="Email" >
+                                        </div>
+                                        <div id="mobileno"><span>Gender :</span>
+                                            <input type="text" name="" id="pPhone" value="" placeholder="Gender">
+    
+                                        </div>
+                                        <div id="address"><span> Relationship: </span>
+                                            <input type="text" name="" id="pAddress" value="" placeholder="Relationship">
+    
+                                        </div>
+                                        <div id="timing"><span>Contact No. :</span>
+                                            <input type="text" name="" id="pAge" value="" placeholder="Contact No.">
+    
+                                        </div>
+                                        <div id="photo"><span>Upload Image :</span>
+                                            <input type="file" name="" id="pUplaodImage" value="" placeholder="Upload Image">
+    
+                                        </div>
+    
+    
+                                        <div class="editBtn">Edit</div>
+                                        <div class="saveBtn">Save</div>
+                                        <div class="ProfilecancelBtn">Cancel</div>
+                                        <div class="ProfilecloseBtn">Close</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pd-div"></div>
+                            <div class="lo-div"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="people">
+                </div>
+                
+            </div>
+        </div>
+        <script>
+            let saveButton = document.querySelectorAll(".saveBtn");
+            for(let i=0;i<saveButton.length;i++){
+                saveButton[i].addEventListener("click", ()=>{    
+              alert("Your details have been saved!");
+                });
+            }
+           
+        </script>
+        <script src="/js/userProfile.js"></script>
+</body>
+</html>
