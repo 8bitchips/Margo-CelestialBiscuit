@@ -12,7 +12,7 @@
     <script type="text/javascript">
       function sendEmail() {
         var receiverId = document.querySelector("input").value;
-       axios.post("https://margowomen.herokuapp.com/call/mail",{mail:receiverId}).then(function (message) {
+       axios.post("https://margo-menstrual-care.herokuapp.com/call/mail",{mail:receiverId}).then(function (message) {
           alert("Mail Sent Successfully");
         }).catch(function (message) {
           alert("failed to Sent Successfully");

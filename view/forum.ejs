@@ -98,7 +98,7 @@
         let name ="";
 
         (async function(){
-            let res = await axios.post("https://margowomen.herokuapp.com/auth/mail");
+            let res = await axios.post("https://margo-menstrual-care.herokuapp.com/auth/mail");
             name = (res.data.id.split("@")[0]);
         })()
 
