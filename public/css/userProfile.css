@@ -1,0 +1,526 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Karla';
+}
+
+.container{
+    height: 100vh !important;
+    width: 100vw !important;
+    padding: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-addPeople{
+    display: flex;
+    justify-content: flex-end;
+}
+.but{
+    height: 50px;
+    width: 250px;
+    cursor: pointer;
+    background-color: #fa9f91;
+    border-radius: 10px;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: 600;
+}
+.second-modal{
+    background-color: white;
+    width: 60%;
+    height: 80%;
+    border: 8px solid gainsboro;
+    border-radius: 20px;
+    
+}
+
+.modal .pDetails{
+    height: 410px;
+}
+.modal input{
+    width: 220px;
+}
+.modal .mainprofile{
+    height: 570px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.column1{
+    height: 100%;
+    width: 20%;
+    background-color: #fa9f91;
+    padding: 2% 0%;
+}
+.column2{
+    height: 100%;
+    width: 70%;
+    box-shadow: 5px 5px 20px #7392fa70;
+}
+.profile-photo{
+    height: 40%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.heading{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pic{
+    height: 180px;
+    width: 180px;
+    overflow: hidden;
+    display: flex;
+    /* margin-bottom: 20px; */
+    justify-content: center;
+    align-items: center;
+}
+.pic img{
+    height: 100%;
+    border-radius: 50%;
+    /* object-fit: cover; */
+}
+.name{
+    color: white;
+    font-weight: 600;
+    font-family: 'Karla';
+    font-size: 20px;
+}
+.options{
+    height: 65%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    
+    font-weight: 600;
+    font-size: 20px;
+    padding-bottom: 80px;
+}
+.options>div{
+    margin-bottom: 40px;
+    cursor: pointer;
+    text-align: left;
+    width: 60%;
+    position: relative;
+    padding-left: 20px;
+   
+}
+.information:before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f4ff";
+    display: inline-block;
+    padding-right: 3px;
+    vertical-align: middle;
+    font-weight: 900;
+    position: absolute;
+    left: -10px;
+ }
+ .personal-details:before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f477";
+    display: inline-block;
+    padding-right: 3px;
+    vertical-align: middle;
+    font-weight: 900;
+    position: absolute;
+    left: -10px;
+ }
+ .lovedOnes:before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f004";
+    display: inline-block;
+    padding-right: 3px;
+    vertical-align: middle;
+    font-weight: 900;
+    position: absolute;
+    left: -10px;
+ }
+
+.personalDetails-div, .lovedOnes-div{
+    display: none;
+}
+
+.modal{
+    height: 100vh;
+    width: 100vw;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.151);
+}
+.people{
+    height: 70vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.name-people{
+    color: black;
+    font-weight: 600;
+    text-align: center;
+}
+
+.detailsPD{
+    width: 694px;
+    height: fit-content;
+    left: 341px;
+    top: 312px;
+  
+    font-family: Baloo 2;
+    font-style: normal;
+    font-weight: bold;
+    font-size: larger;
+    line-height: 57px;
+    color: #757575;
+}
+.page {
+    width: 100%;
+    height: 100vh;
+    min-height: fit-content;
+  }
+  
+  .container {
+      margin: 0 !important;
+    width: 100%;
+    overflow: hidden;
+    padding: 28px;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    min-height: 100%;
+    box-shadow: inset 0px 0px 21px 6px white;
+    padding-top: 40px;
+  }
+  .div1Wrapper{
+    /* background-image: url(./bg.png); */
+    background-size: cover;
+    background-repeat: repeat;
+    height: auto;
+    width: 15%;
+    border-radius: 10px;
+    
+  }
+  .div1 {
+    padding-top: 60px;
+    backdrop-filter: blur(2px);
+    width: 100%;
+    height: 100%;
+  
+  }
+  .div2 {
+    background-color: white;
+    position: relative;
+  
+    background-size: 100%;
+    width: 85%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 45px;
+  }
+  
+  .common {
+    display: flex;
+    align-items: center;
+    margin: 20px 25px;
+    font-size: large;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .first {
+    font-size: 40px;
+    font-weight: 800;
+    display: flex;
+    justify-content: space-between;
+    padding: 2%;
+    align-items: center;
+    border-bottom: 6px inset #fa9f91;
+    /* padding-left: 20%; */
+  }
+  .common i {
+    font-size: 25px;
+    color: rgba(128, 128, 128, 0.637);
+    background-color: white;
+    margin-right: 25px;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  .image img {
+    position: absolute;
+    bottom: -70px;
+    height: 500px;
+    width: 500px;
+    z-index: 0;
+  }
+  
+  .wrap {
+    display: flex;
+    height: fit-content;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 570px;
+    /* display: none; */
+  }
+  
+  .viewBtn, .acceptBtn, .removeBtn, .cancelBtn{
+    width: 110px;
+    height: 40px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fa9f91;
+    cursor: pointer;
+    font-weight: 600;
+    margin-left: 10px;
+    margin: 0px 5px;
+  }
+
+  
+  .reqBtn, .editBtn, .saveBtn,.ProfilecloseBtn, .ProfilecancelBtn, .status, .cancelinProfile{
+    width: 400px;
+    background-color: #fa9f91;
+    height: 40px;
+    font-size: large;
+    font-weight: 600 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    transition: 1s;
+    color: white !important;
+    cursor: pointer;
+    
+    margin: 0px auto;
+    margin-top: 25px;
+    box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
+  }
+  
+
+  .saveBtn, .ProfilecancelBtn{
+      display: none;
+  }
+  .reqBtn:hover{
+    transform: scale(1.1);
+  }
+  .mainprofile{
+    display: flex;
+    /* box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px; */
+    flex-direction: row;
+    height: 520px;
+    }
+  .pDetails {
+    width: 450px;
+    height: 550px;
+    margin: 15px;
+    border-radius: 0px;
+    padding: 5px 10px 10px 10px ;
+    /* box-shadow: 12px -12px 2px -1px rgba(0, 0, 255, .2); */
+    /* box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px; */
+    
+  }
+  #name {
+    width: 284px;
+    height: 76px;
+    left: 341px;
+    top: 230px;
+    font-family: Baloo 2;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 34px;
+    line-height: 76px;
+  }
+  .pDetails span{
+    font-size: 20px;
+    color: black;
+    min-width: 150px;
+    float: left;
+  }
+  .profilePic {
+    width: 270px;
+    height: 370px;
+    margin: 80px 25px;
+    background-color: transparent;
+    background-size: 270px;
+    justify-content: left;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10%;
+    /* min-height: 300px; */
+  }
+  
+  .profilePic img{
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    margin-bottom:20px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  }
+  .profilePic .edit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: x-large;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+  }
+  .details {
+    width: 500px;
+    height: fit-content;
+    left: 341px;
+    top: 312px;
+  
+    font-family: Baloo 2;
+    font-style: normal;
+    font-weight: bold;
+    font-size: larger;
+    line-height: 57px;
+    color: #757575;
+  }
+  #doctorbg{
+    position: relative;
+      left: -110%;
+      bottom: 240px;
+      height: 150%;
+      width: 150%;
+  }
+  .header{
+    display: flex;
+    width: 100%;
+    /* background-color: #60cbb3;; */
+    height: 50px;
+    align-items: center;
+    font-size: large;
+    font-weight: 600;
+    padding: 0px 20px;
+    margin-top: 20px;
+    justify-content: space-around;
+  }
+  .sno{
+    width: 80px;
+    margin: 0px 3px;
+  }
+  .rname, .pname, .dname{
+    width: 180px;
+    margin: 0px 3px;
+  }
+  .format{
+    width: 180px;
+    margin: 0px 3px;
+  }
+  .department, .address{
+    width: 220px;
+    margin: 0px 3px;
+  }
+  .date, .phone{
+    width: 150px;
+    margin: 0px 5px;
+  }
+  
+  .view, .accept, .cancel, .remove, .Cancel{
+    width: 110px;
+    display: flex;
+    justify-content: center;
+    margin: 0px 5px;
+  }
+  
+  .Reports, li, .pendingReq, .docList, .EPrescriptions,.Prescriptions{
+    padding: 0px;
+    list-style: none;
+  }
+  .item{
+    display: flex;
+    padding: 10px 20px;
+    margin: 15px 0px;
+    align-items: center;
+    background-color: white;
+    border-radius: 15px;
+    justify-content: space-around;
+  }
+  .item .sno{
+    max-width: 80px;
+    min-width: 80px;
+  }
+  .item .rname input, #addpresDocName{
+    max-width: 180px;
+    width: 180px;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.596);
+  }
+  
+  .item .ReportPic input{
+    max-width: 180px;
+    width: 180px;
+    border: none;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.596);
+  }
+  .item .date input{
+    max-width: 180px;
+    width: 180px;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.596);
+  }
+  
+  .item .department input{
+    max-width: 220px;
+    width: 220px;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.596);
+  }
+  input{
+    font-size: medium;
+    padding: 10px;
+    height: 30px;
+    margin: 0px 5px;
+    outline: none;
+    border:none;
+    border-bottom: 2px solid gainsboro;
+  }
+  
+  .personalDetails-div .wrap{
+      align-items: flex-start;
+      margin-left: 100px;
+  }
+
+  .detailsPD span{
+      width: 500px;
+  }
+  .detailsPD{
+      width: 750px;
+  }
+  .editBtn{
+    display: none;
+  }
+  .saveBtn{
+    display: flex;
+  }
+
+  a{
+    font-weight: bold;
+  }

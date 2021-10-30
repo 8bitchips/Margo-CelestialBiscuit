@@ -1,0 +1,500 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@300&display=swap');
+
+*{
+    margin:0;
+    padding:0; 
+    box-sizing: border-box;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+:root{
+    --brand-color: #fa9f91;
+    --pallette-pink: #faa1b3;
+    --pallette-blue: #7393fa;
+    --pallette-skin: #fcf3ef;
+    --font-Karla: 'Karla', sans-serif;
+    --font-Zilla: 'Zilla Slab', serif;
+}
+
+/*
+********************
+Navbar Started
+********************
+*/
+
+.navbar{
+    position:absolute;
+    width:100vw;
+    height:85px;
+    left:0px;
+    top:0px;
+    background-color:var(--pallette-skin);
+    display:flex;
+    flex-direction: row;
+}
+
+#website-logo{
+    position:absolute;
+    /*width:257px;*/
+    height:60px;
+    left:96px;
+    top:7px;
+}
+
+ul{
+    list-style-type: none;
+}
+
+li{
+    display:inline;
+    margin-right:20px;
+}
+
+.navbar-links{
+    position:absolute;
+    width:800px;
+    height:28px; 
+    left:510px;
+    top:28px;
+}
+
+.period-tracker{
+    font-family: var(--font-Karla);
+    font-size: 20px;
+    line-height:28px;
+    width:156px;
+    height:28px;
+    top:28px;
+    left:586px;
+    color:#000;
+    text-decoration: none;
+    margin-right: 16px;
+}
+
+.pamper-booth{
+    font-family: var(--font-Karla);
+    font-size: 20px;
+    line-height:28px;
+    width:156px;
+    height:28px;
+    color:#000;
+    top:28px;
+    left:790px;
+    text-decoration: none;
+    margin-right: 16px;
+}
+
+.forum{
+    font-family: var(--font-Karla);
+    font-size: 20px;
+    line-height:28px;
+    width:156px;
+    height:28px;
+    color:#000;
+    top:28px;
+    left:994px;
+    text-decoration: none;
+    margin-right: 16px;
+}
+
+.shop,.call{
+    font-family: var(--font-Karla);
+    font-size: 20px;
+    line-height:28px;
+    width:156px;
+    height:28px;
+    color:#000;
+    top:28px;
+    left:1123px;
+    text-decoration: none;
+    margin-right: 16px;
+}
+
+a:hover{
+    color:var(--brand-color);
+}
+
+.start-here{
+    background-color:var(--brand-color);
+    border-radius:10px;
+    position:absolute;
+    width:140px;
+    height:55.125px;
+    left:1300px;
+    top:11px; 
+    color:#fff;
+    font-family:var(--font-Karla); 
+    font-size:20px;
+    border:none;
+}
+.start-here a:hover{
+    color:white !important;
+}
+/*
+********************
+Navbar Finished
+********************
+*/
+
+/*
+********************
+Hero Section Start
+********************
+*/
+
+/* .hero-section{} */
+
+.corner-bg-blue-div{
+    width:70vw;
+    height:80vh;
+    left:0px;
+    background:rgba(115,147,250,0.5);
+}
+
+.hero-heading{
+    position:absolute;
+    width:488px;
+    height:195px;
+    left:98px;
+    top:180px; 
+    font-family: var(--font-Karla);
+    font-size:48px;
+    color:#000;
+}
+
+.hero-text{
+    position:absolute;
+    width:477px;
+    height:34px;
+    left:104px;
+    top:363px;
+    font-family: var(--font-Zilla);
+    font-size:20px;
+    color:#000;
+}
+
+.hero-bottom-arrow{
+    position:absolute;
+    top:547px;
+    left:104px;
+}
+
+.hero-image{
+    position:absolute;
+    height:450px;
+    left:800px;
+    top:240px;
+}
+
+/*
+********************
+Hero Section Finished 
+********************
+*/
+
+/*
+********************
+Our Services Started 
+********************
+*/
+
+
+.our-services-heading{
+    position: absolute;
+    width: 418px;
+    height: 65px;
+    left: 98px;
+    top: 724px;
+
+font-family: var(--font-Karla);
+font-size: 48px;
+line-height: 65px;
+
+color: #FE7D6A;
+}
+
+.our-services-details{
+    position: absolute;
+width: 1158px;
+height: 656px;
+left: 98px;
+top: 885px;
+
+}
+
+.period-tracker-icon{
+    position: absolute;
+width: 100px;
+height: 100px;
+left: 98px;
+top: 885px;
+}
+
+.notifications-icon{
+    position: absolute;
+width: 100px;
+height: 100px;
+left: 98px;
+top: 1232px;
+}
+
+.pamper-booth-icon{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 506px;
+    top: 885px;
+}
+
+.secure-forum-icon{
+    position: absolute;
+width: 100px;
+height: 100px;
+left: 506px;
+top: 1232px;
+}
+
+.shop-icon{
+    position: absolute;
+width: 100px;
+height: 100px;
+left: 900px;
+top: 1232px;
+}
+
+.spotify-integration-icon{
+    position: absolute;
+width: 100px;
+height: 100px;
+left: 900px;
+top: 885px;
+}
+
+.small-heading{
+    font-family: var(--font-Karla);
+    font-size: 28px;
+    line-height: 42px;
+    color: #000000;
+}
+
+.period-tracker-heading{
+    position: absolute;
+width: 245px;
+height: 42px;
+left: 100px;
+top: 996px;
+}
+
+.notifications-heading{
+    position: absolute;
+width: 226px;
+height: 42px;
+left: 100px;
+top: 1343px;
+}
+
+.pamper-booth-heading{
+    position: absolute;
+width: 243px;
+height: 42px;
+left: 506px;
+top: 996px;
+}
+
+.secure-forum-heading{
+    position: absolute;
+width: 238px;
+height: 42px;
+left: 506px;
+top: 1343px;
+}
+
+.shop-heading{
+    position: absolute;
+width: 88px;
+height: 42px;
+left: 900px;
+top: 1343px;
+}
+
+.spotify-integration-heading{
+    position: absolute;
+width: 325px;
+height: 42px;
+left: 900px;
+top: 996px;
+}
+
+.small-text{
+    font-family: var(--font-Zilla);
+    font-size: 20px;
+    line-height: 29px;
+    color: #000000;
+}
+
+.period-tracker-text{
+
+    position: absolute;
+width: 356px;
+height: 145px;
+left: 100px;
+top: 1049px;
+}
+
+.notifications-text{
+    position: absolute;
+    width: 356px;
+    height: 87px;
+    left: 100px;
+    top: 1396px;}
+
+.pamper-booth-text{
+    position: absolute;
+    width: 356px;
+    height: 145px;
+    left: 506px;
+    top: 1049px;
+    }
+
+.secure-forum-text{
+    position: absolute;
+    width: 356px;
+    height: 145px;
+    left: 509px;
+    top: 1396px;
+}
+
+.shop-text{
+    position: absolute;
+width: 356px;
+height: 145px;
+left: 892px;
+top: 1396px;
+}
+
+.spotify-integration-text{
+    position: absolute;
+    width: 356px;
+    height: 87px;
+    left: 900px;
+    top: 1049px;}
+
+.our-services-arrow{
+    position: absolute;
+width: 54px;
+height: 54px;
+left: 1194px;
+top: 1595px;
+}
+
+/*
+**********************
+Our Services Finished
+**********************
+*/
+
+/*
+**********************
+Our Team Started
+**********************
+*/
+
+.pooja-image{
+    position: absolute;
+width: 300px;
+height: 300px;
+left: 98px;
+top: 1742px;
+}
+
+.nishtha-image{
+    position: absolute;
+width: 300px;
+height: 300px;
+left: 442px;
+top: 1742px;
+}
+
+.gaurisha-image{
+    position: absolute;
+width: 300px;
+height: 300px;
+left: 98px;
+top: 2090px;
+}
+
+.simran-image{
+    position: absolute;
+width: 300px;
+height: 300px;
+left: 442px;
+top: 2090px;
+}
+
+.about-margo{
+    position: absolute;
+width: 497px;
+height: 648px;
+left: 790px;
+top: 1742px;
+
+background: #7393FA;
+}
+
+.about-margo-heading{
+    position: absolute;
+width: 447px;
+height: 42px;
+left:15px;
+top:30px;
+font-family: var(--font-Karla);
+font-size: 36px;
+line-height: 42px;
+/* identical to box height */
+
+text-align: center;
+
+color: #FFFFFF;
+}
+
+.about-margo-text{
+    position: absolute;
+width: 424px;
+height: 494px;
+left:15px;
+top:100px;
+font-family: var(--font-Zilla);
+font-weight: 300;
+font-size: 22px;
+line-height: 26px;
+
+color: #000000;
+
+}
+
+.our-team-heading{
+    position: absolute;
+width: 348px;
+height: 65px;
+left: 98px;
+top: 1649px;
+
+font-family: var(--font-Karla); 
+font-size: 48px;
+line-height: 65px;
+
+color: #FE7D6A;
+
+}
+
+.our-team-section{
+    margin-bottom:100px;
+}
+
+a{
+    color:white;
+}

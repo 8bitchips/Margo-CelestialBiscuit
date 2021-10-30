@@ -1,0 +1,455 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@300&display=swap');
+
+*{
+    margin:0;
+    padding:0; 
+    box-sizing: border-box;
+}
+
+body{
+    overflow-x:hidden;
+}
+
+:root{
+    --brand-color: #fa9f91;
+    --pallette-pink: #faa1b3;
+    --pallette-blue: #7393fa;
+    --pallette-skin: #fcf3ef;
+    --font-Karla: 'Karla', sans-serif;
+    --font-Zilla: 'Zilla Slab', serif;
+}
+
+/*
+********************
+Navbar Started
+********************
+*/
+
+.navbar{
+    position:absolute;
+    width:100vw;
+    height:85px;
+    left:0px;
+    top:0px;
+    background-color:var(--pallette-skin);
+    display:flex;
+    flex-direction: row;
+    z-index: 100;
+}
+
+#website-logo{
+    position:absolute;
+    /*width:257px;*/
+    height:60px;
+    left:96px;
+    top:7px;
+}
+
+ul{
+    list-style-type: none;
+}
+
+li{
+    display:inline;
+    margin-right:20px;
+}
+
+.navbar-links{
+    position:absolute;
+    width:800px;
+    height:28px; 
+    left:510px;
+    top:28px;
+}
+
+.period-tracker{
+    font-family: var(--font-Karla);
+    font-size: 20px;
+    line-height:28px;
+    width:156px;
+    height:28px;
+    top:28px;
+    left:586px;
+    color:#000;
+    text-decoration: none;
+    margin-right: 16px;
+}
+
+.pamper-booth{
+    font-family: var(--font-Karla);
+    font-size: 20px;
+    line-height:28px;
+    width:156px;
+    height:28px;
+    color:#000;
+    top:28px;
+    left:790px;
+    text-decoration: none;
+    margin-right: 16px;
+}
+
+.forum{
+    font-family: var(--font-Karla);
+    font-size: 20px;
+    line-height:28px;
+    width:156px;
+    height:28px;
+    color:#000;
+    top:28px;
+    left:994px;
+    text-decoration: none;
+    margin-right: 16px;
+}
+
+.shop,.call{
+    font-family: var(--font-Karla);
+    font-size: 20px;
+    line-height:28px;
+    width:156px;
+    height:28px;
+    color:#000;
+    top:28px;
+    left:1123px;
+    text-decoration: none;
+    margin-right: 16px;
+}
+
+a:hover{
+    color:var(--brand-color);
+}
+
+.start-here{
+    background-color:var(--brand-color);
+    border-radius:10px;
+    position:absolute;
+    width:140px;
+    height:55.125px;
+    right:100px;
+    top:11px; 
+    color:#fff;
+    font-family:var(--font-Karla); 
+    font-size:20px;
+    border:none;
+}
+
+.start-here a{
+    color:white;
+}
+.start-here a:hover{
+    color:white;
+}
+
+/*
+********************
+Navbar Finished
+********************
+*/
+
+/*
+********************
+Header Started
+********************
+*/
+
+.header-image{
+position: absolute;
+width: 1540px;
+height: 456px;
+left: 0px;
+top: 84px;
+}
+
+.header-heading-box{
+    position: absolute;
+width: 562px;
+height: 108px;
+left: 439px;
+top: 386px;
+
+background: #FFFFFF;
+}
+
+.header-heading{
+    position: relative;
+    left:30px;
+    top:24px;
+    font-family: var(--font-Karla);
+font-style: normal;
+font-weight: bold;
+font-size: 44px;
+line-height: 51px;
+
+color: #fa9f91;
+}
+
+/*
+********************
+Header Finished
+********************
+*/
+
+/*
+********************
+Emotions Started
+********************
+*/
+.emotions-section{
+    display: flex;
+    flex-direction:row; 
+}
+.emotions-heading{
+    position: absolute;
+width: 560px;
+height: 51px;
+left: 54px;
+top: 600px;
+
+font-family: var(--font-Karla);
+font-size: 36px;
+line-height: 51px;
+
+color: #fa9f91;
+}
+
+.emotions-image{
+    position: absolute;
+width: 780px;
+height: 485px;
+left: 741px;
+top: 540px;
+}
+
+.emotion-btn{
+    border:none;
+    border-radius: 10px;
+    width: 269px;
+    height: 80px;
+    font-family: var(--font-Zilla);
+    font-size: 40px;
+    color:#000;
+    cursor:pointer;
+}
+
+.emotion-btn:hover{
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    transition: 0.3s;
+}
+
+
+.in-pain{
+    position:absolute;
+    left: 66px;
+top: 713px;
+
+background: #FE6565;
+}
+
+.okayish{
+    position:absolute;
+    left: 372px;
+    top: 713px;
+    
+    background: #F1F52F;}
+
+.like-a-queen{
+    position:absolute;
+    left: 372px;
+    top: 827px;
+    
+    background: #50D63A;}
+
+.good{
+    position:absolute;
+    left: 66px;
+top: 827px;
+
+background: #F59F39;
+}
+
+/*
+********************
+Emotions Finished
+********************
+*/
+
+/*
+********************
+Music Started
+********************
+*/
+
+.music-section{
+    display:flex;
+    flex-direction:row;
+}
+
+.music-heading{
+    position: absolute;
+width: 521px;
+height: 102px;
+left: 782px;
+top: 1118px;
+
+font-family: var(--font-Karla);
+font-size: 36px;
+line-height: 51px;
+
+color: #fa9f91;
+}
+
+.music-image{
+    position: absolute;
+width: 742px;
+height: 486px;
+left: 0px;
+top: 1024px;
+}
+
+.spotify-logo{
+    position: absolute;
+width: 234px;
+height: 70px;
+left: 782px;
+top: 1406px;
+}
+
+/*
+********************
+Music Finished
+********************
+*/
+
+/*
+********************
+Notifications Started
+********************
+*/
+
+.notifications-section{
+    display:flex;
+    flex-direction:row;
+}
+
+.notifications-image{
+    position: absolute;
+width: 780px;
+height: 485px;
+left: 743px;
+top: 1510px;
+}
+
+.notifications-heading{
+    position: absolute;
+width: 600px;
+height: 204px;
+left: 54px;
+top: 1572px;
+
+font-family: var(--font-Karla);
+font-size: 36px;
+line-height: 51px;
+
+color: #fa9f91;
+}
+
+.notifications-button{
+    position: absolute;
+width: 76px;
+height: 60px;
+left: 538px;
+top: 1800px;
+
+background: #fa9f91;
+border-radius: 10px;
+border:none;
+}
+
+#notifications-email{
+    position: absolute;
+width: 464px;
+height: 60px;
+left: 54px;
+top: 1800px;
+
+border: 2px solid #fa9f91;
+box-sizing: border-box;
+border-radius: 10px;
+
+font-family: var(--font-Zilla);
+font-size: 20px;
+line-height: 34px;
+color: #9E9292;
+padding:25px;
+}
+
+#notifications-email:focus{
+    outline: none;
+    box-shadow: 0 0 0 1px #fa9f91;
+}
+
+
+
+/*
+***********************
+Notifications Finished
+***********************
+*/
+
+.disc.row{
+    height: 100vh;
+    margin: 0 !important;
+    width: 100%;
+    background-image: url("./discussion-forum/workInProgress.jpg");
+    background-size: cover;
+    
+}
+.row>div{
+    height: 100% !important;
+}
+.row i {
+    font-size: x-large;
+}
+.row1>div{
+    display: flex;
+    align-items: center;
+    width: 300px;
+    color: white;
+}
+.row1 input{
+    border-bottom: 3px solid white;
+    width: 300px;
+    padding: 0;
+    height: 20px;
+    outline: none !important;
+    padding-left: 10px;
+    color :white;
+    font-size: 15px;
+    font-weight: bold;
+    margin :0!important;
+}
+
+.row1{
+    display: flex;
+    /* align-items: flex-end; */
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-left: 100px;
+    height: 100vh;
+    width: 30vw;
+    padding-bottom: 200px;
+}
+.row1 button{
+    background-color: white;
+    color:#7393fa;
+    width: 300px;
+}
+.row1 button{
+    background-color: white !important;
+}
+.row1 input:focus{
+    border-bottom: 3px solid white !important;
+    box-shadow: none;
+    border-color: white !important;
+
+}

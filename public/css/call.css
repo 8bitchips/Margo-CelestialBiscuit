@@ -1,0 +1,128 @@
+.banner {
+  padding: 0;
+  background-color: #52575c;
+  color: white;
+}
+
+.banner-text {
+  padding: 8px 20px;
+  margin: 0;
+}
+
+#join-form {
+  margin-top: 10px;
+}
+
+.tips {
+  font-size: 12px;
+  margin-bottom: 2px;
+  color: gray;
+}
+
+.join-info-text {
+  margin-bottom: 2px;
+}
+
+input {
+  width: 100%;
+  margin-bottom: 2px;
+}
+
+.player {
+  width: 480px;
+  height: 320px;
+}
+
+.player-name {
+  margin: 8px 0;
+}
+
+#success-alert,
+#success-alert-with-token {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .player {
+    width: 320px;
+    height: 240px;
+  }
+}
+#remote-playerlist {
+  display: flex;
+}
+
+.player {
+  width: 250px;
+  height: 150px;
+  margin: 15px;
+}
+.otherDiv {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 280px;
+}
+
+.custom_scrollBar {
+  overflow-y: auto;
+}
+.custom_scrollBar::-webkit-scrollbar {
+  width: 0.4em;
+  height: 0.4em;
+}
+.custom_scrollBar::-webkit-scrollbar,
+.custom_scrollBar::-webkit-scrollbar-thumb {
+  overflow: visible;
+  border-radius: 4px;
+}
+.custom_scrollBar::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+.custom_scrollBar:hover::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+#local-player{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+#leave{
+  position: absolute;
+  bottom: 10px;
+  left: 30px;
+  width: 100px;
+}
+#join{
+  display: none;
+}
+.mainPlayer{
+  height: 100% !important;
+  width: 100% !important;
+}
+#main{
+  width: 70vw;
+    background-color: gainsboro;
+    border-radius: 15px;
+    height: calc( 100vh - 200px );
+    position: absolute;
+    left: 20vw;
+    top: 75px;
+}
+.head{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: x-large;
+  width: 70vw;
+  background-color: gainsboro;
+  border-radius: 15px;
+  height: calc( 100vh - 200px );
+  position: absolute;
+  left: 20vw;
+  top: 115px;
+
+}
