@@ -66,7 +66,7 @@
       identifierType: "email",
       apiKey: "22d5c911-c87e-42f4-9458-976dea6b83c0",
       onSuccess: (payload) => {
-        axios.post("https://margowomen.herokuapp.com/auth/login",{id:payload.identifier}).then(()=>{
+        axios.post("https://margo-menstrual-care.herokuapp.com/auth/login",{id:payload.identifier}).then(()=>{
           window.location.href = "/"
         }).catch(()=>{
           alert("failed to login")
