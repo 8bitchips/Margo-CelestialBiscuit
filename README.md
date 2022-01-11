@@ -1,5 +1,5 @@
 # Margo
-<a href="https://youtu.be/uLWXLh5gFHQ"> <img src="https://github.com/Nishtha0801/Margo-CelestialBiscuit/blob/main/public/img/logo.png?raw=true" alt="Demo Video" height='300' width='300'/> </a><br><br>
+<a href="https://youtu.be/uLWXLh5gFHQ"> <img src="https://github.com/Nishtha0801/Margo-CelestialBiscuit/blob/main/public/img/logo.png?raw=true" alt="Demo Video" height='300' width='300'/> </a><font size=1>Demo<br><br>
 Margo is a product created uniquely for females to track their periods, notify their loved ones about their mood, discuss and chat with other females for common menstrual issues and shop for menstrual hygiene products. 
 <br><br>
 Margo was initiated because one of our teammate experienced distress during her menstrual cycle and all she wanted was to listen to some good music and talk to her friends. 
